@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation.xml"
+    app:startDestination="@id/blankFragment">
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.my_lugat.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank">
+        <action
+            android:id="@+id/action_blankFragment_to_selectedFragment"
+            app:destination="@id/selectedFragment" />
+        <action
+            android:id="@+id/action_blankFragment_to_info2"
+            app:destination="@id/info2" />
+        <action
+            android:id="@+id/action_blankFragment_to_asosiy2"
+            app:destination="@id/asosiy2" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedFragment"
+        android:name="com.example.my_lugat.SelectedFragment"
+        android:label="fragment_selected"
+        tools:layout="@layout/fragment_selected">
+        <action
+            android:id="@+id/action_selectedFragment_to_setting"
+            app:destination="@id/setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="com.example.my_lugat.fragment.add"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add">
+
+    </fragment>
+    <fragment
+        android:id="@+id/edit2"
+        android:name="com.example.my_lugat.fragment.edit"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/info2"
+        android:name="com.example.my_lugat.fragment.Info"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.example.my_lugat.fragment.Setting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting">
+
+        <action
+            android:id="@+id/action_setting_to_technologyFragment"
+            app:destination="@id/technologyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/asosiy2"
+        android:name="com.example.my_lugat.Asosiy"
+        android:label="fragment_asosiy"
+        tools:layout="@layout/fragment_asosiy" />
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.my_lugat.fragment.TechnologyFragment"
+        android:label="fragment_technology"
+        tools:layout="@layout/fragment_technology">
+        <action
+            android:id="@+id/action_technologyFragment_to_wordsFragment"
+            app:destination="@id/wordsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordsFragment"
+        android:name="com.example.my_lugat.fragment.WordsFragment"
+        android:label="fragment_words"
+        tools:layout="@layout/fragment_words">
+        <action
+            android:id="@+id/action_wordsFragment_to_add2"
+            app:destination="@id/add2" />
+        <action
+            android:id="@+id/action_wordsFragment_to_edit2"
+            app:destination="@id/edit2" />
+    </fragment>
+</navigation>
